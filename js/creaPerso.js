@@ -20,6 +20,7 @@ function initPersonnage(){
 
     une fois les dégâts récupérés, les mettre à jours dans l'élément avec l'id dgCac
     */
+    setProfil(profil);
 }
 
 function setMouvement(corps){
@@ -40,6 +41,35 @@ function setMouvement(corps){
     }
     return mouvement;
 }
+
+function setDeg(corps){
+
+}
+
+function setKo(esprit){
+
+}
+
+function nbActions(corps){
+
+}
+
+function setProfil(profil){
+    fetch('../ressources/profils.json')
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        console.log(data);
+        for(profil of data){
+            console.log(profil.name);
+            
+        }
+        
+    });
+}
+
+
 
 window.addEventListener('DOMContentLoaded', function(){
     initPersonnage();
