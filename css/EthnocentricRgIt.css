@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'EthnocentricRg';
+    font-style: italic;
+    src: url('fonts/EthnocentricRgIt.eot');
+    src: url('fonts/EthnocentricRgIt.eot') format('embedded-opentype'),
+         url('fonts/EthnocentricRgIt.woff2') format('woff2'),
+         url('fonts/EthnocentricRgIt.woff') format('woff'),
+         url('fonts/EthnocentricRgIt.ttf') format('truetype'),
+         url('fonts/EthnocentricRgIt.svg#EthnocentricRgIt') format('svg');
+}

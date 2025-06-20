@@ -1,0 +1,118 @@
+/* 
+Les imports d'autres fichiers CSS (par exemple pour ajouter des polices de caractères ou les icones 
+doivent TOUJOURS être fait en début de fichier
+*/
+@import url('./EthnocentricRg.css');
+@import url('./EthnocentricRgIt.css');
+/* 
+faire un :root permet : 
+    - de créer des variables
+    - de définir des comportements appliqué à tous le style
+    - de surcharger facilement la racine du css imposé par le navigateur
+    - si changement de couleurs ou de taille d'éléments (police de caractère, définition de largeur de colnne, etc)
+        - le root permet de centraliser l'intelligence des calculs etc.
+
+pour les mesure de police de caractères, de marges sur des éléments texte, pour les goutières entre éléments, je préconise d'utiliser le rem au lieu du em, et on défini la taille du rem grace au root
+*/
+
+:root{
+    /*
+    Définir la police de caractère dans le root pour la lecture normale
+    Pour l'accessibilité, utiliser une police sans empatement et non naturellement grasse
+    */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Il faut augmenter la taille de la police */
+    font-size: 1.2rem;
+    /*
+    en écrivant font-size: 1.2rem dans le root, on change la définition de base du rem du navigateur
+    Toutes les tailles définie par la suite dans le css se cacluleront non plus sur 16px mais sur :
+
+    (16px * 0.2) + 16px
+    3.2px + 16px = 19.2px
+    
+    maintenant 1rem = 19.2px
+    1.5rem = 19.2*1.5rem = 28.8px
+    
+    il faut aussi augmenter la hauteur de ligne pour augmenter ainsi l'interligne, 
+    ce qui rend les textes plus lisibles
+    */
+    line-height: 1.7rem;
+    /*
+    Si on utilise police particulière pour le titre du site, on la déclare dans le root
+    */
+    --site-title-font: 'EthnocentricRg';
+    --gutter-x: 0.5rem;
+    --gutter-y: 0.5rem;
+}
+
+/* Surcharger les comportements natifs du navigateur */
+
+/* 
+le box-sizing 
+Il faut l'appliquer à tous les éléments en border-box, et même dans les pseudo-éléments :: before et :: after
+*/
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+/* Déclarations générales */
+
+h1{
+    font-family: var(--site-title-font);
+}
+
+/* Déclarations de classes */
+
+.title-italic{
+    font-family: var(--site-title-font);
+    font-style: italic;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--gutter-x);
+  padding-right: var(--gutter-x);
+}
+
+/* déclarations de structure */
+
+/* body a par défaut une marge extérieure de 8px (c'est à dire 0.5em car par défaut 1em = 16px) */
+body{
+    margin: 0;
+}
+
+/* media queries */
+
+@media screen and (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .container {
+    width: 1320px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .container {
+    width: 1560px;
+  }
+}
