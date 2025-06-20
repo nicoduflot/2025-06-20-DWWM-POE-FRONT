@@ -11,6 +11,15 @@ function initPersonnage(){
     document.getElementById('pvChart').innerText = pv;
     const mana = esprit*3;
     document.getElementById('manaChart').innerText = mana;
+    /*
+    créer la fonction setDeg avec en paramètre la valeur de corps
+    corps 1 - 2 => dg 1
+    corps 3 - 4 => dg 2
+    corps 5 - 6 => dg 3
+    corps 7 => dg 4
+
+    une fois les dégâts récupérés, les mettre à jours dans l'élément avec l'id dgCac
+    */
 }
 
 function setMouvement(corps){
