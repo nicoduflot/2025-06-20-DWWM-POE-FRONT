@@ -1,0 +1,61 @@
+body >*{
+    border: 1px solid black;
+}
+
+@media screen {
+    body >*{
+        padding: 0.5rem;
+    }
+}
+
+@media print{
+    @page {
+        size: landscape;
+        margin: 0;
+        bleed: 0;
+    }
+
+    body{
+        font-size: 0.7rem;
+        line-height: 1.2rem;
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        gap: 0px;
+        grid-template-areas: 
+        'p5 p4 p3 p2'
+        'p6 p7 p8 p1'
+        ;
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: repeat(2, 50%);
+    }
+
+    body >*{
+        border: 1px solid black;
+        padding: 0.5rem;
+        overflow: hidden;
+    }
+
+    #p5, #p4, #p3, #p2{
+        transform: rotate(180deg) translateX(-0.1px);
+    }
+
+    #p1{
+        grid-area: p1;
+    }
+    #p2{
+        grid-area: p2;
+    }
+    #p3{
+        grid-area: p3;
+    }
+    #p4{
+        grid-area: p4;
+    }
+    #p5{
+        grid-area: p5;
+    }
+    #p6{
+        grid-area: p6;
+    }
+}
