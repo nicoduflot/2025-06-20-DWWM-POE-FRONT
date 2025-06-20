@@ -1,0 +1,45 @@
+[
+    {
+        "humain": {
+            "bonusAutre": "<p>On ajoute 2d6 or à la valeur en or des objets qu'il trouve</p>",
+            "bonusMana": 0,
+            "ethnieAff": "Humain"
+        }
+    },
+    {
+        "elfeHN": {
+            "bonusAutre": "<p>Ajoute à son mana son niveau fois 10 points de mana(augmente à chaque montée de niveau)</p>",
+            "bonusMana": 10,
+            "ethnieAff": "Elfe Haut-né"
+        }
+    },
+    {
+        "elfeArbo": {
+            "bonusAutre": "<p>Ajoute à son mana son niveau fois 5 points de mana(augmente à chaque montée de niveau) et un point d'action en plus à ses points d'actions de base.</p>",
+            "bonusMana": 5,
+            "ethnieAff": "Elfe arboricole"
+        }
+    },
+    {
+        "elfeNoc": {
+            "bonusAutre": "<p>Voit dans le noir et ajoute à son mana son niveau fois 5(augmente à chaque montée de niveau).</p>",
+            "bonusMana": 5,
+            "ethnieAff": "Elfe nocturne"
+        }
+    },
+    {
+        "nain": {
+            "bonusAutre": "<p>Réduit les dégâts qu'il subit d'un point par niveau</p>",
+            "bonusMana": 0,
+            "ethnieAff": "Nain"
+        }
+    },
+    {
+        "orc": {
+            "bonusAutre": "<p>Voit dans le noir et peut \"sentir\" à travers les murs ou les portes (Sort automatique, 2 manas par test).</p>",
+            "bonusMana": 0,
+            "ethnieAff": "Orc"
+        }
+    }
+   
+]

@@ -1,0 +1,214 @@
+[
+  {
+    "barbare": {
+      "description": "<p>Les barbares sont une communauté nomade, se déplaçant au rythme des saisons. Ils vivent principalement de chasse et de cueillette. Ils font du commerce, et vendent généralement le surplus de viande et de peaux tannées. Les femmes comme les hommes sont des guerriers fiers, et la plus grande honte pour un barbare est de ne pas mourir l’épée à la main.</p><p>Dès leur plus jeune âge, les barbares apprennent la survie dans la nature, la chasse, la pèche, les bases des soins par les plantes, la construction d’abris et de pièges. Certains se sont sédentarisés et contrôlent et protègent contre rétribution quelques passages routiers et fluviaux, certains vivent près des mines qu’ils protègent ainsi que les mineurs. </p>",
+      "sortAutomatique": [
+        {
+          "nomSort": "Colère",
+          "coutSort": "2 manas",
+          "descriptionSort": "Double les détâs de base pendant 1d6 tours."
+        }
+      ],
+      "arme": [
+        {
+          "nomArme": "Hache de barbare.",
+          "degatArme": 5
+        },
+        {
+          "nomArme": "Dague en fer",
+          "degatArme": 2
+        }
+      ],
+      "sac": [
+        "5 viandes séchées (2 PV par viande)",
+        "Briquet",
+        "Torche",
+        "Piège à loup (4 dégâts), bloquant"
+      ]
+    }
+  },
+  {
+    "guerrier": {
+      "description": "<p>Les guerriers sont des soldats de métier, qui ont quitté une armée régulière pour faire principalement du mercenariat, en louant leur épée au plus offrant. La plupart des guerriers continuent, après avoir quitté l’armée, de garder une sorte de code de l’honneur.</p><p>Ils sont rarement seuls et rejoignent des petits groupes. Mais il arrive que certains de ses groupes ne trouvent pas assez de travail et deviennent des brigands. Les groupes de brigands composés de guerriers sont très difficile à gérer dans la région de Lumiyard, heureusement qu’ils ne sont pas très nombreux.</p>",
+      "sortAutomatique": [
+        {
+          "nomSort": "Voie du guerrier",
+          "coutSort": "2 manas",
+          "descriptionSort": "2 manas par dé relancé en attaque."
+        }
+      ],
+      "arme": [
+        {
+          "nomArme": "Épée de guerrier.",
+          "degatArme": 4
+        },
+        {
+          "nomArme": "Dague en fer",
+          "degatArme": 2
+        }
+      ],
+      "sac": [
+        "5 rations de soldat (2 PV par ration)",
+        "Briquet",
+        "Torche",
+        "Armure légère, -2 dégâts."
+      ]
+    }
+  },
+  {
+    "chasseur": {
+      "description": "<p>Les chasseurs sont les rois de la traque du gibier, de la pose de piège et du tir efficace. Ils gagnent leur vie en revendant le surplus de nourriture ainsi que les peaux des bêtes qu’ils chassent.</p>",
+      "sortAutomatique": [
+        {
+          "nomSort": "Sniper",
+          "coutSort": "2 manas",
+          "descriptionSort": "2 manas par dé ajouté pour tirer"
+        }
+      ],
+      "arme": [
+        {
+          "nomArme": "Arc court.",
+          "degatArme": 3
+        },
+        {
+          "nomArme": "Dague effilée",
+          "degatArme": 3
+        }
+      ],
+      "sac": [
+        "3 petites potions de soin (2 pv par potion)",
+        "2 petites potions de mana (2 mana par potion)",
+        "briquet",
+        "torche",
+        "piège à loups(4 dégâts)"
+      ]
+    }
+  },
+  {
+    "magicien": {
+      "description": "<p>Les magiciens sont repérés très jeunes par des mages plus vieux et plus expérimentés. Ces mages veulent voir leur savoir et leurs techniques se perpétrer donc ils parcourent le monde en suivant des signes et les courants magiques pour retrouver les personnes qui pourraient potentiellement devenirs leurs apprentis.</p><p>Si la personne (ou les parents dans le cas des enfants) est d’accord, le mage prend l’apprenti sous son aile et durant une dizaine d’années il va lui apprendre les bases de sa magie. Ensuite, l’apprenti doit passer deux ans minimum à se débrouiller seul, en vivant de sa magie afin d’améliorer ses connaissances.</p><p> Une fois que cette épreuve est finie, il doit rejoindre son maître pour finaliser son apprentissage. Il arrive parfois que les apprentis meurent ou ne reviennent jamais auprès du maître, alors le choix et l’apprentissage est très stricte afin d’éviter ce type de drame.</p>",
+      "sortAutomatique": [
+        {
+          "nomSort": "boule de feu",
+          "coutSort": "2 manas",
+          "descriptionSort": "4 dégâts"
+        },
+        {
+          "nomSort": "peau de pierre",
+          "coutSort": "2 manas",
+          "descriptionSort": "-2 dégâts, 1d6 tour"
+        }
+      ],
+      "arme": [
+        {
+          "nomArme": "Bâton ferré.",
+          "degatArme": 3
+        },
+        {
+          "nomArme": "Dague effilée",
+          "degatArme": 3
+        }
+      ],
+      "sac": [
+        "2 petites potions de soin (2 PV par potion)",
+        "3 petites potions de mana (2 manas par potion)",
+        "Briquet",
+        "Torche",
+        "Livre de sorts (permet de préparer d’autres sorts que les sorts automatiques, une à deux actions par sorts, coût en mana selon le sort. Les sorts se trouvent ou s’apprennent durant l’aventure)."
+      ]
+    }
+  },
+  {
+    "filou": {
+      "description": "<p>La plupart des filous sont des enfants vivant dans les rues et ayant dû se débrouiller tout seuls pour survivre. Ceux qui survivent assez longtemps deviennent riches ou des mercenaires, les autres décèdent ou finissent en prison.</p><p>Généralement, les filous sont bons dans toutes les techniques de vols, mais un filou aura toujours un secteur de prédilection (cambriolage, pickpocket, vol à l’étalage, etc.).</p><p>Les pièges, les serrures, la dissimulation et la fuite sont leur pain quotidien. Un filou en reconnaîtra toujours un autre et une sorte de code d’honneur est établi entre eux, les filous se serrent les coudent et ne trahissent jamais les leurs.</p>",
+      "sortAutomatique": [
+        {
+          "nomSort": "Voie du filou",
+          "coutSort": "2 manas",
+          "descriptionSort": "2 manas par dé relancé pour défendre"
+        }
+      ],
+      "arme": [
+        {
+          "nomArme": "Dague effilée",
+          "degatArme": 3
+        },
+        {
+          "nomArme": "Dague effilée",
+          "degatArme": 3
+        }
+      ],
+      "sac": [
+        "3 petites potions de soin (2 pv par potion)",
+        "2 petites potions de mana (2 mana par potion)",
+        "briquet",
+        "torche",
+        "2 kits du filou (ouverture ou désamorçage automatique)"
+      ]
+    }
+  },
+  {
+    "druide": {
+      "description": "<p>Les druides / Shamans sont des personnes formées à la magie de la nature et aux secrets des plantes. On devient druide / Shaman en étant choisi par un druide / Shaman, généralement durant l’enfance. La plupart des paysans espère que leur enfant sera choisi pour devenir druide / Shaman, car ils sont respectés et font généralement le bien autour d’eux.</p><p>Leur magie est liée à la nature, et au transformisme. De base, le druide / Shaman possède un animal totem en lequel il peut très facilement se transformer. Il peut aussi, mais plus difficilement, se transformer en d’autres animaux mais doit pour ce faire avoir passé au moins quelques heures en présence de cet animal afin de s’être synchronisé avec l’aura de l’animal. Mais cette transformation est plus compliquée et fatigante que quand il prend son animal totem.</p>",
+      "sortAutomatique": [
+        {
+          "nomSort": "la forme de l’ours",
+          "coutSort": "3 manas",
+          "descriptionSort": "Le druide se transforme en ours durant 1d6 tours. Peut utiliser ambidextrie."
+        }
+      ],
+      "arme": [
+        {
+          "nomArme": "Bâton ferré",
+          "degatArme": 3
+        },
+        {
+          "nomArme": "Dague effilée",
+          "degatArme": 3
+        },
+        {
+          "nomArme": "Griffe d'ours",
+          "degatArme": 3
+        }
+      ],
+      "sac": [
+        "3 rations (2 pv par ration)",
+        "2 petites potions de mana",
+        "briquet",
+        "torche",
+        "piège à loup (4 dégâts, bloquant)"
+      ]
+    }
+  },
+  {
+    "marchand": {
+      "description": "<p>Les marchands sont de deux types, nomades ou sédentaires. Les sédentaires possèdent une boutique dans une ville, un village, les nomades se déplacent avec leur boutique, de la valise pleine de surprises à la carriole de caravane se transformant en étal itinérant.</p><p>Les boutiques sont de divers intérêts : Armes, vivres, potions, Vêtements, bijoux, Bazar (un peu de tout). Choisir une de ces spécialité (mis à part bazar), donne une expertise et / ou une pratique d’un métier associé. Par exemple, un vendeur d’arme saura mieux entretenir les arme et armures, un marchand de vivres pourra facilement trouver de la nourriture et des denrées de première nécessité, celui qui vend des potions pourra en fabriquer.</p><p><em>Ce personnage nécessite un joueur non débutant en JDR.</em></p>",
+      "sortAutomatique": [
+        {
+          "nomSort": "Négoce",
+          "coutSort": "2 manas",
+          "descriptionSort": "Permet de payer moins cher(-30 pourcent)."
+        },
+        {
+          "nomSort": "Bagout",
+          "coutSort": "2 manas",
+          "descriptionSort": "Ajoute 2 dés à ses jets d'esprit quand il essai de persuader, charmer, interroger, parler en public, etc..."
+        }
+      ],
+      "arme": [
+        {
+          "nomArme": "Dague en acier",
+          "degatArme": 3
+        },
+        {
+          "nomArme": "Arbalète",
+          "degatArme": 11
+        }
+      ],
+      "sac": [
+        "Si Magasin (selon le magasin, le sac se rempli avec l’aval du MJ)",
+        "Si itinérant (le moyen de déplacement est à établir avec le MJ)"
+      ]
+    }
+  }
+]
