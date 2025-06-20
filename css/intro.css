@@ -1,0 +1,84 @@
+@charset "UTF-8";
+/* comment reported on output */
+/*
+Map des breakpoints
+taille largeur min de l'écran en pixel
+*/
+:root {
+  --font-size: 1.1rem;
+}
+
+/*
+Map des breakpoints
+taille largeur min de l'écran en pixel
+*/
+a,
+a:visited {
+  color: darkred;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body > header h1 {
+  font-family: Impact, "Haettenschweiler", "Arial Narrow Bold", sans-serif;
+}
+body > nav ul {
+  padding: 0;
+  list-style-type: none;
+}
+body > nav ul > li {
+  color: black;
+}
+
+/*  media queries automatiques */
+@media screen and (min-width: 576px) {
+  /* ttt */
+  .container {
+    width: 540px;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* ttt */
+  .container {
+    width: 720px;
+  }
+}
+@media screen and (min-width: 992px) {
+  /* ttt */
+  .container {
+    width: 960px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* ttt */
+  .container {
+    width: 1140px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  /* ttt */
+  .container {
+    width: 1320px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  /* ttt */
+  .container {
+    width: 1560px;
+  }
+}
+
+/*# sourceMappingURL=intro.css.map */

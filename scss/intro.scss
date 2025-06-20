@@ -1,0 +1,49 @@
+// comment not reported on output
+/* comment reported on output */
+// utiliser les maps
+@use 'sass:map';
+@use 'partials/root';
+@import 'partials/variables';
+a,
+a:visited {
+  color: darkred;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    > {
+        header {
+            h1 {
+                font-family: Impact, "Haettenschweiler", "Arial Narrow Bold", sans-serif;
+            }
+            }
+        nav {
+        ul {
+            padding: 0;
+            list-style-type: none;
+            > li {
+                color: black;
+            }
+        }
+        }
+    }
+}
+
+/*  media queries automatiques */
+@each $breakpoint, $value in $breakpoints{
+    @media screen and (min-width: #{$value}){
+        /* ttt */
+        .container {
+            width: #{map.get($breakpoint-max-width, $breakpoint)};
+        }
+    }
+}
