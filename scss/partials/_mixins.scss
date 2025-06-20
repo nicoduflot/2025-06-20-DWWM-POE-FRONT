@@ -1,0 +1,7 @@
+// les mixins permettent de définir un règles css de base, qui pourra être réutilisée avec des déclinaisons
+
+@mixin theme($theme: DarkGray){
+    background-color: $theme;
+    box-shadow: 0 0 1px rgbe($theme, 0.25);
+    color: #fff;
+}

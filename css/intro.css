@@ -1,17 +1,8 @@
-@charset "UTF-8";
 /* comment reported on output */
-/*
-Map des breakpoints
-taille largeur min de l'écran en pixel
-*/
 :root {
   --font-size: 1.1rem;
 }
 
-/*
-Map des breakpoints
-taille largeur min de l'écran en pixel
-*/
 a,
 a:visited {
   color: darkred;
@@ -41,6 +32,31 @@ body > nav ul {
 }
 body > nav ul > li {
   color: black;
+}
+
+/* mixins */
+.info {
+  background-color: DarkGray;
+  box-shadow: 0 0 1px rgbe(DarkGray, 0.25);
+  color: #fff;
+}
+
+.alert {
+  background-color: darkred;
+  box-shadow: 0 0 1px rgbe(darkred, 0.25);
+  color: #fff;
+}
+
+.warning {
+  background-color: orange;
+  box-shadow: 0 0 1px rgbe(orange, 0.25);
+  color: #fff;
+}
+
+.success {
+  background-color: darkgreen;
+  box-shadow: 0 0 1px rgbe(darkgreen, 0.25);
+  color: #fff;
 }
 
 /*  media queries automatiques */
