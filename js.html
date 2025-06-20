@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Révisions - Javascript</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/creaPerso.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Générateur de perso</h1>
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="./">Intro</a></li>
+                <li><a href="./css.html">CSS</a></li>
+                <li><a href="./grid.html">Grilles CSS</a></li>
+                <li><a href="./media-css.html">Screen et print CSS</a></li>
+                <li><a href="./js.html">Javascript</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="row">
+            <div class="col-md-3 mb-1">
+                <label class="form-label" for="charName">Nom : </label>
+            </div>
+            <div class="col-md-3 mb-1">
+                <input type="text" id="charName" placeholder="Arnold - Brigitte" class="form-control" />
+            </div>
+            <div class="col-md-3 mb-1">
+                <label class="form-label" for="genre">Sexe : </label>
+            </div>
+            <div class="col-md-3 mb-1">
+                <input type text name="genre" id="genre" class="form-control" placeholder="Homme - Femme - Autre">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 mb-1">
+                <label for="ethnie" class="form-label">
+                    Ethnie :
+                </label>
+            </div>
+            <div class="col-md-3 mb-1">
+                <select name="ethnie" id="ethnie" class="form-select">
+                    <option value="humain">Humain</option>
+                    <option value="elfeHN">Elfe haut-né</option>
+                    <option value="elfeArbo">Elfe arboricole</option>
+                    <option value="elfeNoc">Elfe Nocturne</option>
+                    <option value="nain">Nain</option>
+                    <option value="orc">Orc</option>
+                </select>
+            </div>
+            <div class="col-md-3 mb-1">
+                <label for="archetype" class="form-label">
+                    Archétype :
+                </label>
+            </div>
+            <div class="col-md-3 mb-1">
+                <select name="archetype" id="archetype" class="form-select">
+                    <option value="barbare">Barbare</option>
+                    <option value="guerrier">Guerrier</option>
+                    <option value="chasseur">Chasseur</option>
+                    <option value="magicien">Magicien</option>
+                    <option value="filou">Filou</option>
+                    <option value="druide">Druide / Shaman</option>
+                    <option value="marchand">Marchand</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 mb-1">
+                <label for="corps" class="form-label">
+                    Corps :
+                </label>
+            </div>
+            <div class="col-md-2 mb-1">
+                <input type="number" name="corps" id="corps" value="4" min="1" max="7" class="form-control">
+            </div>
+            <div class="col-md-2 mb-1">
+                <label for="esprit" class="form-label">
+                    Esprit :
+                </label>
+            </div>
+            <div class="col-md-2 mb-1">
+                <input type="number" name="esprit" id="esprit" value="4" min="1" max="7" class="form-control">
+            </div>
+            <div class="col-6 col-md-2 mb-1">
+                <label class="form-label">
+                    Mouvement :
+                </label>
+            </div>
+            <div class="col-6 col-md-2 mb-1" id="mouvement">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 row">
+                <div class="col-12">
+                    <label class="form-label">
+                        Description :
+                    </label>
+                </div>
+                <div class="col-12" id="ethnieChart">
+
+                </div>
+            </div>
+            <div class="col-md-6 row">
+                <div class="col-6 col-md-3">
+                    <label class="form-label">
+                        PV
+                    </label>
+                </div>
+                <div class="col-6 col-md-3" id="pvChart">
+
+                </div>
+                <div class="col-6 col-md-3">
+                    <label class="form-label">
+                        Mana
+                    </label>
+                </div>
+                <div class="col-6 col-md-3" id="manaChart">
+
+                </div>
+                <div class="col-6 col-md-3">
+                    <label class="form-label">
+                        Dg CaC :
+                    </label>
+                </div>
+                <div class="col-6 col-md-3" id="dgCac">
+
+                </div>
+                <div class="col-6 col-md-3">
+                    <label class="form-label">
+                        KO :
+                    </label>
+                </div>
+                <div class="col-6 col-md-3" id="ko">
+
+                </div>
+                <div class="col-6 col-md-3">
+                    <label class="form-label">
+                        Dg Dist :
+                    </label>
+                </div>
+                <div class="col-6 col-md-3" id="dgDist">
+
+                </div>
+                <div class="col-6 col-md-3">
+                    <label class="form-label">
+                        Actions :
+                    </label>
+                </div>
+                <div class="col-6 col-md-3" id="actions">
+
+                </div>
+                <div class="col-md-12">
+                    <label class="form-label">
+                        Sort(s) Automatique(s) :
+                    </label>
+                </div>
+                <div class="col-md-12" id="listeSorts">
+
+                </div>
+                <div class="col-12">
+                    <label class="form-label">
+                        Armes :
+                    </label>
+                </div>
+                <div class="col-10" id="nomArme">
+
+                </div>
+                <div class="col-2" id="degatArme">
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <label class="form-label">
+                    Sac :
+                </label>
+            </div>
+            <div class="col-12" id="sacPerso">
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">&copy DAWAN 2025</div>
+    </footer>
+</body>
+
+</html>
