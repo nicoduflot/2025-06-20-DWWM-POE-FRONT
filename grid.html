@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Révisions - Grilles CSS</title>
+    <link rel="stylesheet" href="./css/reboot.css" />
+    <link rel="stylesheet" href="./css/grilles-css.css" />
+</head>
+<body>
+    <header id="header">
+        <h1>Grilles CSS</h1>
+    </header>
+    <nav id="main-nav">
+        <ul>
+            <li><a href="./">Intro</a></li>
+            <li><a href="./css.html">CSS</a></li>
+            <li><a href="./grid.html">Grilles CSS</a></li>
+        </ul>
+    </nav>
+    <main id="content">
+        <section>
+            <article>
+                <h2>Les aires de grille css</h2>
+                <p>
+                    Les aires de grilles permettent de définir des zone dans la pages, selon une grille.
+                </p>
+                <p>
+                    Par exemple, en smartphone le site s'affiche ainsi
+                </p>
+                <figure>
+                    <img class="vignette" src="./images/smart.png" />
+                </figure>
+                <p>
+                    Quand la largeur de l'affichage de l'appareil atteint ou dépasse 900px, le site s'affiche ainsi.
+                </p>
+                <figure>
+                    <img class="vignette" src="./images/desk.png" />
+                </figure>
+                <p>
+                    Il faut déclarer comme ici, le <code class="balise">body</code> en display: grid.
+                </p>
+                <p>
+                    Le display: grid permet de définir des modèles de colonnes
+                </p>
+                <p>
+                    en smartphone, on ne déclare qu'une colonne, chacun des éléments enfants directs de body occupera une ligne dans une colonne, avec la propriété grid-template-columns.
+                </p>
+                <p>
+                    Il faut pourtant définir les aires de la grille avec la propriété grid-template-areas.
+                </p>
+                <p>
+                    En smartphone : 
+                </p>
+                <code>
+                    body{<br />
+                    &nbsp;&nbsp;padding: var(--gutter-x);<br />
+                    &nbsp;&nbsp;display: grid;<br />
+                    &nbsp;&nbsp;grid-template-columns: 1fr;<br />
+                    &nbsp;&nbsp;grid-template-areas: <br />
+                    &nbsp;&nbsp;'entete'<br />
+                    &nbsp;&nbsp;'nav'<br />
+                    &nbsp;&nbsp;'content'<br />
+                    &nbsp;&nbsp;'info'<br />
+                    &nbsp;&nbsp;'footer'<br />
+                    &nbsp;&nbsp;;<br />
+                    &nbsp;&nbsp;gap: var(--gutter-x);<br />
+                    }
+                </code>
+                <p>
+                    Il faut ensuite associer chacun des éléments enfants direct à une aire du template
+                </p>
+                <code>
+                    #header{<br />
+                    &nbsp;&nbsp;grid-area: entete;<br />
+                    }<br />
+                    #main-nav{<br />
+                    &nbsp;&nbsp;grid-area: nav;<br />
+                    }<br />
+                    #content{<br />
+                    &nbsp;&nbsp;grid-area: content;<br />
+                    }<br />
+                    #info{<br />
+                    &nbsp;&nbsp;grid-area: info;<br />
+                    }<br />
+                    #footer{<br />
+                    &nbsp;&nbsp;grid-area: footer;<br />
+                    }<br />
+                </code>
+                <p>
+                    Pour l'affichage au dessus de 900px, il va falloir changer le nombre de colonne.
+                </p>
+                <p>
+                    on peut indique une largeur fixe à la première colonne et une fraction du reste pour la deuxième : la deuxième aura sa taille qui changera selon la largeur de l'écran moins la largeur fixe de la première colonne
+                </p>
+                <p>
+                    Il faudra aussi redéclarer les aires de grille : deux pour l'entete et la nav car ils prennent toute la largeur de l'écran, on déclare cette fois-ci info avant content et les deux aires sur la même ligne, le navigateur placera avant le contenu l'air info en lui imposant une taille fixe alors que content occupera tout l'espace restant. Enfin on déclare le footer lui aussi sur deux colonnes.
+                </p>
+                <code>
+                    @media screen and (min-width: 900px) {<br />
+                    &nbsp;&nbsp;body{<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;grid-template-columns: 250px 1fr;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;grid-template-areas: <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;'entete entete'<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;'nav nav'<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;'info content'<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;'footer footer'<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;;<br />
+                    &nbsp;&nbsp;}<br />
+                    }
+                </code>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2>Les lignes et les colonnes</h2>
+                <div class="grid">
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus modi ipsam explicabo quae labore, recusandae reprehenderit libero? Voluptate repellat itaque debitis tempore! Atque illo nisi amet architecto iure blanditiis officia?
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus modi ipsam explicabo quae labore, recusandae reprehenderit libero? Voluptate repellat itaque debitis tempore! Atque illo nisi amet architecto iure blanditiis officia?
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus modi ipsam explicabo quae labore, recusandae reprehenderit libero? Voluptate repellat itaque debitis tempore! Atque illo nisi amet architecto iure blanditiis officia?
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus modi ipsam explicabo quae labore, recusandae reprehenderit libero? Voluptate repellat itaque debitis tempore! Atque illo nisi amet architecto iure blanditiis officia?
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus modi ipsam explicabo quae labore, recusandae reprehenderit libero? Voluptate repellat itaque debitis tempore! Atque illo nisi amet architecto iure blanditiis officia?
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus modi ipsam explicabo quae labore, recusandae reprehenderit libero? Voluptate repellat itaque debitis tempore! Atque illo nisi amet architecto iure blanditiis officia?
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus modi ipsam explicabo quae labore, recusandae reprehenderit libero? Voluptate repellat itaque debitis tempore! Atque illo nisi amet architecto iure blanditiis officia?
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus modi ipsam explicabo quae labore, recusandae reprehenderit libero? Voluptate repellat itaque debitis tempore! Atque illo nisi amet architecto iure blanditiis officia?
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus modi ipsam explicabo quae labore, recusandae reprehenderit libero? Voluptate repellat itaque debitis tempore! Atque illo nisi amet architecto iure blanditiis officia?
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus modi ipsam explicabo quae labore, recusandae reprehenderit libero? Voluptate repellat itaque debitis tempore! Atque illo nisi amet architecto iure blanditiis officia?
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <aside id="info">
+        <h3>
+            Info substancielles
+        </h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magni perspiciatis suscipit porro veritatis laborum odit eligendi voluptatum nemo sunt molestiae, veniam esse, iure inventore sapiente consectetur voluptatibus, pariatur molestias.
+        </p>
+    </aside>
+    <footter id="footer">
+        <div class="center">
+            &copy; DAWAN 2025
+        </div>
+    </footter>
+</body>
+</html>

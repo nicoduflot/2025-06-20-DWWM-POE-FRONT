@@ -116,7 +116,7 @@ body{
     width: 1560px;
   }
 }
-
+/* les media queries permettent d'exploiter le print */
 @media print{
   h1{
     font-family: Arial, Helvetica, sans-serif;
